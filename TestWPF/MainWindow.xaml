@@ -1,0 +1,26 @@
+﻿<Window x:Class="TestWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestWPF"
+        xmlns:my="clr-namespace:UserControls.Controls;assembly=UserControls" 
+        xmlns:commonlibrary="clr-namespace:CommonLibrary;assembly=CommonLibrary" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <my:TestUserControl Name="test" Height="200" Width="200"  />
+        </Grid>
+        <Button Height="20" Grid.Row="1" Width="100" Content="加密" Click="Button_Click" ></Button>
+        <Button Height="20" Grid.Row="3" Width="100" Content="解密" Click="Button_Click_1"></Button>
+
+    </Grid>
+</Window>
